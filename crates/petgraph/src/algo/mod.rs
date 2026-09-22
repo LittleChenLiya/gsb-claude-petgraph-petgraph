@@ -29,6 +29,7 @@ pub mod maximal_cliques;
 pub mod maximum_flow;
 pub mod min_spanning_tree;
 pub mod page_rank;
+pub mod pareto_paths;
 pub mod scc;
 pub mod simple_paths;
 pub mod spfa;
@@ -58,6 +59,9 @@ pub use maximal_cliques::maximal_cliques;
 pub use maximum_flow::{dinics, ford_fulkerson};
 pub use min_spanning_tree::{min_spanning_tree, min_spanning_tree_prim};
 pub use page_rank::page_rank;
+pub use pareto_paths::{
+    pareto_paths, ParetoLabel, ParetoPathError, ParetoPaths, ParetoSearchStats,
+};
 #[allow(deprecated)]
 pub use scc::scc;
 pub use scc::{
@@ -809,3 +813,40 @@ macro_rules! impl_positive_measure(
 );
 
 impl_positive_measure!(u8, u16, u32, u64, u128, usize, f32, f64);
+
+/// Non-negative integer measure usable for both objectives of
+/// [pareto_paths].
+///
+/// Implementors are the fixed-width signed and unsigned integer types. The
+/// algorithm requires totals to start at zero and additions to report overflow
+/// instead of silently wrapping.
+pub trait ParetoWeight:
+    Copy + Clone + Eq + Ord + PartialOrd + core::fmt::Debug
+{
+    /// The additive identity, zero.
+    fn zero_weight() -> Self;
+    /// Checked integer addition. Returns None on overflow.
+    fn checked_add_weight(self, rhs: Self) -> Option<Self>;
+}
+
+macro_rules! impl_pareto_weight {
+    ($($t:ty),*) => {
+        $(
+            impl ParetoWeight for $t {
+                #[inline]
+                fn zero_weight() -> Self {
+                    0
+                }
+
+                #[inline]
+                fn checked_add_weight(self, rhs: Self) -> Option<Self> {
+                    self.checked_add(rhs)
+                }
+            }
+        )*
+    };
+}
+
+impl_pareto_weight!(
+    u8, u16, u32, u64, u128, usize, i8, i16, i32, i64, i128, isize
+);
