@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## Unreleased
+
+### New Features
+
+- Add `algo::quotient::quotient_graph`: build a quotient graph from an explicit node partition with a fallible edge-weight aggregator, bidirectional node mappings and per-edge source tracking
 
 ## [0.8.3](https://github.com/petgraph/petgraph/compare/petgraph@v0.8.2...petgraph@v0.8.3) - 2025-09-30
 
