@@ -29,6 +29,7 @@ pub mod maximal_cliques;
 pub mod maximum_flow;
 pub mod min_spanning_tree;
 pub mod page_rank;
+pub mod quotient;
 pub mod scc;
 pub mod simple_paths;
 pub mod spfa;
@@ -58,6 +59,7 @@ pub use maximal_cliques::maximal_cliques;
 pub use maximum_flow::{dinics, ford_fulkerson};
 pub use min_spanning_tree::{min_spanning_tree, min_spanning_tree_prim};
 pub use page_rank::page_rank;
+pub use quotient::{Quotient, QuotientError, SelfLoopPolicy, quotient_graph};
 #[allow(deprecated)]
 pub use scc::scc;
 pub use scc::{
