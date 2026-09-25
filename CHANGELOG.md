@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## Unreleased
+
+### New Features
+
+- Add pausable simple directed cycle enumeration (`algo::SimpleCycleEnumerator`) with
+  batch results, an edge-visit budget, resumable cursors bound to the graph version,
+  rotation-normalized edge cycles, and support for parallel edges and self-loops
 
 ## [0.8.3](https://github.com/petgraph/petgraph/compare/petgraph@v0.8.2...petgraph@v0.8.3) - 2025-09-30
 

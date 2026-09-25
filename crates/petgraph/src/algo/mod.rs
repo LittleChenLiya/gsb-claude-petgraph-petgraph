@@ -30,6 +30,7 @@ pub mod maximum_flow;
 pub mod min_spanning_tree;
 pub mod page_rank;
 pub mod scc;
+pub mod simple_cycles;
 pub mod simple_paths;
 pub mod spfa;
 #[cfg(feature = "stable_graph")]
@@ -63,6 +64,9 @@ pub use scc::scc;
 pub use scc::{
     kosaraju_scc::kosaraju_scc,
     tarjan_scc::{TarjanScc, tarjan_scc},
+};
+pub use simple_cycles::{
+    CycleBatch, CycleBatchStatus, CycleCursor, CycleEnumeratorError, SimpleCycleEnumerator,
 };
 pub use simple_paths::{all_simple_paths, all_simple_paths_multi};
 pub use spfa::spfa;
