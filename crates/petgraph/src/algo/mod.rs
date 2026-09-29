@@ -31,6 +31,7 @@ pub mod min_spanning_tree;
 pub mod page_rank;
 pub mod scc;
 pub mod simple_paths;
+pub mod simple_shortest_paths;
 pub mod spfa;
 #[cfg(feature = "stable_graph")]
 pub mod steiner_tree;
@@ -65,6 +66,7 @@ pub use scc::{
     tarjan_scc::{TarjanScc, tarjan_scc},
 };
 pub use simple_paths::{all_simple_paths, all_simple_paths_multi};
+pub use simple_shortest_paths::{SimpleShortestPath, SimpleShortestPaths, simple_shortest_paths};
 pub use spfa::spfa;
 #[cfg(feature = "stable_graph")]
 pub use steiner_tree::steiner_tree;
