@@ -24,6 +24,7 @@ pub mod ford_fulkerson;
 pub mod isomorphism;
 pub mod johnson;
 pub mod k_shortest_path;
+pub mod k_shortest_simple_path;
 pub mod matching;
 pub mod maximal_cliques;
 pub mod maximum_flow;
@@ -53,6 +54,7 @@ pub use johnson::johnson;
 #[cfg(feature = "rayon")]
 pub use johnson::parallel_johnson;
 pub use k_shortest_path::k_shortest_path;
+pub use k_shortest_simple_path::{CheckedMeasure, KShortestSimplePaths, k_shortest_simple_paths};
 pub use matching::{Matching, greedy_matching, maximum_matching};
 pub use maximal_cliques::maximal_cliques;
 pub use maximum_flow::{dinics, ford_fulkerson};
