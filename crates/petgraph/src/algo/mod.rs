@@ -23,6 +23,7 @@ pub mod floyd_warshall;
 pub mod ford_fulkerson;
 pub mod isomorphism;
 pub mod johnson;
+pub mod k_edge_disjoint_paths;
 pub mod k_shortest_path;
 pub mod matching;
 pub mod maximal_cliques;
@@ -52,6 +53,7 @@ pub use isomorphism::{
 pub use johnson::johnson;
 #[cfg(feature = "rayon")]
 pub use johnson::parallel_johnson;
+pub use k_edge_disjoint_paths::k_edge_disjoint_paths;
 pub use k_shortest_path::k_shortest_path;
 pub use matching::{Matching, greedy_matching, maximum_matching};
 pub use maximal_cliques::maximal_cliques;
