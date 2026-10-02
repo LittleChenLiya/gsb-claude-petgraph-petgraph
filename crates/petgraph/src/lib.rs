@@ -519,6 +519,7 @@ mod quickcheck;
 #[cfg(feature = "serde-1")]
 mod serde_utils;
 mod traits_graph;
+pub mod transpose;
 pub mod unionfind;
 
 pub mod operator;

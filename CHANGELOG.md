@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 
 
+## Unreleased
+
+### New Features
+
+- Add `transpose` module with transpose-copy utilities for directed `Graph` and `StableGraph`: build a new graph with every edge reversed while node/edge weights are copied through explicit (fallible) clone closures. The functions return the transposed graph together with node/edge index maps for full traceability, preserve parallel edges and self-loops, skip vacant `StableGraph` slots, reject undirected graphs, and leave the source graph untouched.
+
 ## [0.8.3](https://github.com/petgraph/petgraph/compare/petgraph@v0.8.2...petgraph@v0.8.3) - 2025-09-30
 
 ### Bug Fixes
