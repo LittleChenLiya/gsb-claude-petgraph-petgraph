@@ -523,6 +523,7 @@ pub mod unionfind;
 
 pub mod operator;
 pub mod prelude;
+pub mod transpose;
 
 /// `Graph<N, E, Ty, Ix>` is a graph datastructure using an adjacency list representation.
 pub mod graph {
@@ -531,6 +532,9 @@ pub mod graph {
         EdgeWeightsMut, Edges, EdgesConnecting, Externals, Frozen, Graph, GraphError, GraphIndex,
         IndexType, Neighbors, Node, NodeIndex, NodeIndices, NodeReferences, NodeWeightsMut,
         UnGraph, WalkNeighbors, edge_index, node_index,
+    };
+    pub use crate::transpose::{
+        TransposeError, TransposedGraph, TryClone, transpose, transpose_graph,
     };
 }
 
