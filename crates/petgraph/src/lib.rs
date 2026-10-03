@@ -523,6 +523,7 @@ pub mod unionfind;
 
 pub mod operator;
 pub mod prelude;
+pub mod reachability;
 
 /// `Graph<N, E, Ty, Ix>` is a graph datastructure using an adjacency list representation.
 pub mod graph {
