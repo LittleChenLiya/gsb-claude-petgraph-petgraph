@@ -34,6 +34,7 @@ pub mod simple_paths;
 pub mod spfa;
 #[cfg(feature = "stable_graph")]
 pub mod steiner_tree;
+pub mod topological_layers;
 pub mod tred;
 
 use alloc::{vec, vec::Vec};
@@ -68,6 +69,7 @@ pub use simple_paths::{all_simple_paths, all_simple_paths_multi};
 pub use spfa::spfa;
 #[cfg(feature = "stable_graph")]
 pub use steiner_tree::steiner_tree;
+pub use topological_layers::{TopologicalCycle, TopologicalLayers, topological_layers};
 
 use super::{
     EdgeType,
