@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 
 
+## [Unreleased]
+
+### New Features
+
+- Add a read-only single-node failure impact analyzer (`algo::failure_impact`) that, given a start node and a set of targets, reports which targets become unreachable when each candidate node is removed, along with one previously reachable path. The graph is never mutated, cycles and parallel edges are supported, candidates and targets are reported in stable caller order, and originally unreachable targets are listed separately.
+
+
 ## [0.8.3](https://github.com/petgraph/petgraph/compare/petgraph@v0.8.2...petgraph@v0.8.3) - 2025-09-30
 
 ### Bug Fixes

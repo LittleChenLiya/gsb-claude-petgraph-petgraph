@@ -18,6 +18,7 @@ pub mod bridges;
 pub mod coloring;
 pub mod dijkstra;
 pub mod dominators;
+pub mod failure_impact;
 pub mod feedback_arc_set;
 pub mod floyd_warshall;
 pub mod ford_fulkerson;
@@ -43,6 +44,7 @@ pub use bellman_ford::{bellman_ford, find_negative_cycle};
 pub use bridges::bridges;
 pub use coloring::dsatur_coloring;
 pub use dijkstra::{bidirectional_dijkstra, dijkstra};
+pub use failure_impact::{FailureImpactReport, LostTarget, NodeFailureImpact, failure_impact};
 pub use feedback_arc_set::greedy_feedback_arc_set;
 pub use floyd_warshall::floyd_warshall;
 pub use isomorphism::{
