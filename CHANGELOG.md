@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 
 
+## Unreleased
+
+### New Features
+
+- Add `algo::allowed_reachability::AllowedReachability`: an owned reachability
+  snapshot restricted to an allowed node set, reusable for path queries that
+  report the exact traversed `EdgeId`s and are unaffected by later graph
+  mutations
+
 ## [0.8.3](https://github.com/petgraph/petgraph/compare/petgraph@v0.8.2...petgraph@v0.8.3) - 2025-09-30
 
 ### Bug Fixes

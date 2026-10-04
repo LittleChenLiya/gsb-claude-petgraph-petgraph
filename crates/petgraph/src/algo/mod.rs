@@ -11,6 +11,7 @@ so that they are generally applicable. For now, some of these still require
 the `Graph` type.
 */
 
+pub mod allowed_reachability;
 pub mod articulation_points;
 pub mod astar;
 pub mod bellman_ford;
@@ -38,6 +39,7 @@ pub mod tred;
 
 use alloc::{vec, vec::Vec};
 
+pub use allowed_reachability::{AllowedReachability, AllowedReachabilityError};
 pub use astar::astar;
 pub use bellman_ford::{bellman_ford, find_negative_cycle};
 pub use bridges::bridges;
