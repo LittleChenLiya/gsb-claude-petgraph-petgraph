@@ -34,6 +34,7 @@ pub mod simple_paths;
 pub mod spfa;
 #[cfg(feature = "stable_graph")]
 pub mod steiner_tree;
+pub mod time_windows;
 pub mod tred;
 
 use alloc::{vec, vec::Vec};
@@ -66,6 +67,10 @@ pub use scc::{
 };
 pub use simple_paths::{all_simple_paths, all_simple_paths_multi};
 pub use spfa::spfa;
+pub use time_windows::{
+    EdgeSchedule, ScheduleError, TimeWindow, TimeWindowPath, TimeWindowStep,
+    earliest_arrival_path, validate_schedule,
+};
 #[cfg(feature = "stable_graph")]
 pub use steiner_tree::steiner_tree;
 
