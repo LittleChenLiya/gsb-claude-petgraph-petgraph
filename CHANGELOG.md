@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [Unreleased]
+
+### New Features
+
+- Add `algo::time_windows`: earliest-arrival routing over edges with a
+  non-negative integer travel duration and half-open departure windows
+  `[start, end)`, with explicit per-step arrival/wait/departure reporting.
 
 ## [0.8.3](https://github.com/petgraph/petgraph/compare/petgraph@v0.8.2...petgraph@v0.8.3) - 2025-09-30
 

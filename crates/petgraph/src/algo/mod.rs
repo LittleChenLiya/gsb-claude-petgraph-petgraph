@@ -34,6 +34,7 @@ pub mod simple_paths;
 pub mod spfa;
 #[cfg(feature = "stable_graph")]
 pub mod steiner_tree;
+pub mod time_windows;
 pub mod tred;
 
 use alloc::{vec, vec::Vec};
