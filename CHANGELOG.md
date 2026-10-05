@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 
 
+## Unreleased
+
+### New Features
+
+- Add `resource_constrained_shortest_path`: label-setting search with per-node Pareto frontiers that finds the cheapest path whose total non-negative integer resource consumption stays within a budget. Keeps multiple non-dominated states per node, preserves parallel edges via returned `EdgeId`s, and rejects negative costs/resources and arithmetic overflow.
+
+
 ## [0.8.3](https://github.com/petgraph/petgraph/compare/petgraph@v0.8.2...petgraph@v0.8.3) - 2025-09-30
 
 ### Bug Fixes
