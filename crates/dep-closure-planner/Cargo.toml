@@ -1,0 +1,14 @@
+[package]
+name                   = "dep-closure-planner"
+version                = "0.1.0"
+authors.workspace      = true
+edition.workspace      = true
+license.workspace      = true
+repository.workspace   = true
+rust-version.workspace = true
+publish                = false
+
+description = "Exact minimal dependency-closure planner with budget-limited search, cycle diagnostics and topological execution plans"
+
+[lints]
+workspace = true
