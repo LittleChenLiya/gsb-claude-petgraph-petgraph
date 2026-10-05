@@ -10,6 +10,14 @@ build:
 test:
     cargo test --all-features
 
+# Runs only the dependency closure planner tests (small, deterministic)
+test-closure:
+    cargo test -p petgraph --test dependency_closure
+
+# Runs the dependency closure planner example (six-node sharing demo)
+example-closure:
+    cargo run -p petgraph --example closure_planner
+
 # Miri with all tests (this might take very long)
 miri:
     cargo miri nextest run
